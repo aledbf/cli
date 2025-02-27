@@ -79,7 +79,7 @@ export async function extendImage(params: DockerResolverParameters, config: Subs
 			if (params.buildxOutput) {
 				args.push('--output', params.buildxOutput);
 			} else {
-				args.push('--load'); // (short for --output=docker, i.e. load into normal 'docker images' collection)
+				args.push('--output', 'type=image,push=false');
 			}
 		}
 		if (params.buildxCacheTo) {
